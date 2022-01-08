@@ -1,24 +1,13 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+*Robert Mungai is my name,
+a Software developer, data scientist and AI expert among others.
 
-Things you may want to cover:
+* This is my basic names app created Ruby,bootstrap and Javascript,CSS 
 
-* Ruby version
+* The app uses Postgresql,and has various gems installed
 
-* System dependencies
+* It is just that basic
+======================
+Enjoy creating your customized baby names list
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
