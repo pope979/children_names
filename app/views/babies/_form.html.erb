@@ -1,0 +1,49 @@
+<%= form_with(model: baby) do |form| %>
+  <% if baby.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(baby.errors.count, "error") %> prohibited this baby from being saved:</h2>
+
+      <ul>
+        <% baby.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field form-group">
+    <%= form.text_field :first_name, 
+    class:"form-control", placeholder: "First Name" %>
+  </div>
+
+  <div class="field form-group">
+   
+    <%= form.text_field :last_name, 
+    class:"form-control", placeholder: "Last Name" %>
+  </div>
+
+  <div class="field form-group">
+   
+    <%= form.text_field :gender, 
+    class:"form-control",placeholder: "Gender" %>
+  </div>
+
+  <div class="field form-group">
+   
+    <%= form.text_field :client_email,
+     class:"form-control", placeholder: "Client Email" %>
+  </div>
+  
+  <div class="field form-group">
+   
+    <%= form.number_field :user_id,id: :baby_user_id,
+     class:"form-control", value: current_user.id,type: :hidden %>
+  </div>
+  
+    
+  
+<br/>
+  <div class="actions">
+    <%= form.submit class:'btn btn-primary' %>
+  </div>
+<% end %>

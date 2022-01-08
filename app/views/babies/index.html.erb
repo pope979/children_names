@@ -1,0 +1,52 @@
+
+
+
+<% if user_signed_in? %>
+
+<table class="table table-striped table-bordered table-hover">
+
+  <thead class="thead-dark">
+    <tr>
+      <th>Name</th>
+      <th>Gender</th>
+      <th>Client email</th>
+      <th>User Id</th>
+      <th> </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @babies.each do |baby| %>
+    <% if baby.user == current_user %>
+      <tr>
+        <td>
+        <%= link_to baby.first_name + ' ' + baby.last_name, baby %>
+          
+        </td>
+        <td><%= baby.gender %></td>
+        <td><%= baby.client_email %></td>
+        <td><%= baby.user_id %></td>
+        
+        
+        
+        <td><%= link_to 'Delete', baby, method: :delete, data: { confirm: 'Are you sure?' },class: "btn btn-outline-danger" %></td>
+        
+       
+      </tr>
+      <%end%>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Baby', new_baby_path, class: "btn btn-success"%>
+
+<%else%>
+<h1>Baby Names App</h1>
+<p>Home of Your Baby Names</p>
+
+<%end%>
+
+
+

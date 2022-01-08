@@ -1,0 +1,18 @@
+<div class="jumbotron">
+  <h1 class="display-4">
+  <%= @baby.first_name %>
+  <%= @baby.last_name %>
+  </h1>
+  <p class="lead">
+  
+    <%= @baby.gender %>|
+    <%= @baby.client_email %>|
+</p>
+
+  <hr class="my-4">
+  
+  <%= link_to 'Edit', edit_baby_path(@baby),class:"btn btn-primary" %> |
+  <%= link_to 'Back', babies_path,class:"btn btn-primary" %> |
+  <%= link_to 'Delete', @baby, method: :delete, data: { confirm: 'Are you sure?' },class: "btn btn-dark" %>
+</div>
+

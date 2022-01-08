@@ -1,0 +1,9 @@
+<h1>Editing Baby</h1>
+
+<%= render 'form', baby: @baby %>
+
+<%= link_to 'Show', @baby,class: "btn btn-primary" %> |
+
+<%= link_to 'Back', babies_path, class: "btn btn-primary"%>|
+
+<%= link_to 'Delete', @baby, method: :delete, data: { confirm: 'Are you sure?' },class: "btn btn-danger" %>
